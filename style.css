@@ -1,0 +1,275 @@
+/* Global Reset & Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 28px;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Light Mode (Default) */
+:root {
+  --bg: #f7dada;
+  --text: #000000;
+  --primary: #168cda;
+  --card-bg: #f5a1a1;
+  --skill-bar: #0062a4;
+  --nav-bg: #0f1c3c;
+  --footer-bg: #0e1a35;
+}
+
+/* Dark Mode */
+body.dark {
+  --bg: #000000;
+  --text: #d1d1d1;
+  --card-bg: #1e1e1e;
+  --skill-bar: #00c3ff;
+  --nav-bg: #121212;
+  --footer-bg: #1c1c1c;
+}
+
+/* Navigation */
+nav {
+  background: var(--nav-bg);
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-size: 25px;
+  transition: background 0.4s;
+}
+
+.toggle-theme {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #007acc, #00c2ff);
+  text-align: center;
+  padding: 1rem 0rem;
+  color: #000;
+  font-size: 20px;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 1490px;
+  height: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  transition: background 0.4s, color 0.4s;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 3.5rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  font-size: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.4s, color 0.4s;
+  font-size: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--primary);
+  color: white;
+}
+
+/* Skill Bars */
+.skills .skill {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+.skills .skill span {
+  font-weight: bold;
+}
+
+.skills .bar {
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skills .bar div {
+  height: 100%;
+  background: var(--skill-bar);
+  text-align: right;
+  color: white;
+  padding-right: 5px;
+  font-size: 20px;
+  transition: background 0.4s;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  font-size: 20px;
+}
+
+.project {
+  padding: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.4s;
+}
+
+.project:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.timeline .event {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline .event::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 4px;
+  background: var(--primary);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Resume Button */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background 0.4s;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 20px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--primary);
+  transition: background 0.4s, color 0.4s;
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 18px;
+  transition: background 0.4s;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  font-size: 20px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
+}
