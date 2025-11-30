@@ -21,13 +21,13 @@ body {
 
 /* Light Mode (Default) */
 :root {
-  --bg: #f7dada;
+  --bg: #ffcbcb;
   --text: #000000;
-  --primary: #168cda;
-  --card-bg: #f5a1a1;
-  --skill-bar: #0062a4;
-  --nav-bg: #0f1c3c;
-  --footer-bg: #0e1a35;
+  --primary: #407088;
+  --card-bg:  #ffb5b5;
+  --skill-bar: #407088;
+  --nav-bg: #132743;
+  --footer-bg: #132743;
 }
 
 /* Dark Mode */
@@ -35,7 +35,7 @@ body.dark {
   --bg: #000000;
   --text: #d1d1d1;
   --card-bg: #1e1e1e;
-  --skill-bar: #00c3ff;
+  --skill-bar: #407088;
   --nav-bg: #121212;
   --footer-bg: #1c1c1c;
 }
@@ -75,7 +75,7 @@ nav {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #007acc, #00c2ff);
+  background: linear-gradient(135deg, #22477a, #477c96);
   text-align: center;
   padding: 1rem 0rem;
   color: #000;
